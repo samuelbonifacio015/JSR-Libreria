@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo - JSR</title>
+
+    <link rel="stylesheet" href="css/catalogo.css" />
+
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/JSR.jpg" alt="Librería JSR Logo" width="50" />
+                <span>Librería JSR</span>
+            </a>
+        </div>
+    
+        <div class="search-login">
+            <div class="search-bar">
+                <input type="text" placeholder="¿Qué estás buscando?" />
+                <button><i class="fa fa-search"></i></button>
+            </div>
+    
+            <button class="login-button" onclick="window.location.href='login.html'">Inicia Sesión</button>
+            <button class="register-button" onclick="window.location.href='login.html'">Regístrate</button>
+    
+            <div class="cart-item">
+                <a href="#" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="cart-dropdown" id="cartDropdown">
+                    <div class="cart-header">
+                        <h3>Carrito</h3>
+                        <span class="cart-close">×</span>
+                    </div>
+                    <div class="cart-items" id="cartItems">
+                        <!-- Los ítems se añadirán dinámicamente con JavaScript -->
+                    </div>
+                    <div class="cart-footer">
+                        <p>Total: S/. <span id="cartTotal">0.00</span></p>
+                        <div class="cart-actions">
+                            <button class="view-cart-btn">Ver carrito</button>
+                            <button class="checkout-btn">Finalizar Compra</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header-nav">
+        <ul class="nav-list">
+            <li><a href="catalogo.html" class="active">LOS MÁS VENDIDOS</a></li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">UTILES</a>
+                <div class="dropdown-content">
+                    <a href="#">ESCOLAR</a>
+                    <a href="#">OFICINA</a>
+                    <a href="#">UNIVERSITARIO</a>
+                    <a href="#">ZONA DE LECTURA</a>
+                    <a href="#">ARTE Y DISEÑO</a>
+                    <a href="#">BORRADORES</a>
+                    <a href="#">CORRECTORES</a>
+                    <a href="#">CRAYONES Y ÓLEOS</a>
+                    <a href="#">LÁPICES</a>
+                    <a href="#">MARCADORES</a>
+                    <a href="#">PLUMONES INDELEBLES</a>
+                    <a href="#">PLUMONES PARA PIZARRA</a>
+                    <a href="#">REGLAS</a>
+                    <a href="#">TIJERAS</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">ESCRITORIO</a>
+                <div class="dropdown-content">
+                    <a href="#">ARCHIVADORES</a>
+                    <a href="#">DISPENSADORES</a>
+                    <a href="#">POSITS</a>
+                    <a href="#">CLIPS Y CHINCHES</a>
+                    <a href="#">PERFORADORAS</a>
+                    <a href="#">ENGRAPADORAS Y GRAPAS</a>
+                    <a href="#">CINTAS ADHESIVAS</a>
+                    <a href="#">ORGANIZADORES DE ESCRITORIO</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">JUGUETERIA</a>
+                <div class="dropdown-content">
+                    <a href="#">PELUCHES</a>
+                    <a href="#">COLOREOS</a>
+                    <a href="#">CAPIBARA</a>
+                    <a href="#">JUEGOS DIDÁCTICOS</a>
+                    <a href="#">ROMPECABEZAS</a>
+                    <a href="#">JUEGOS DE MESA</a>
+                    <a href="#">MUÑECOS Y FIGURAS</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">MOCHILAS Y ACCESORIOS</a>
+                <div class="dropdown-content">
+                    <a href="#">MOCHILAS</a>
+                    <a href="#">CARTUCHERAS</a>
+                    <a href="#">LONCHERAS</a>
+                    <a href="#">MALETAS</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">PAPELERIA</a>
+                <div class="dropdown-content">
+                    <a href="#">CARTONES</a>
+                    <a href="#">CARTULINAS</a>
+                    <a href="#">PAPEL CELOFÁN</a>
+                    <a href="#">PAPEL FOTOCOPIA</a>
+                    <a href="#">PAPEL FOTOGRÁFICO</a>
+                    <a href="#">PAPELES ADHESIVOS</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">ARCHIVO</a>
+                <div class="dropdown-content">
+                    <a href="#">CARPETAS Y ARCHIVADORES</a>
+                    <a href="#">FOLDERS ESCOLARES</a>
+                    <a href="#">ARCHIVADORES DE PALANCA</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li><a href="#">TECNOLOGÍA</a></li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">BELLEZA</a>
+                <div class="dropdown-content">
+                    <a href="#">PERFUMES</a>
+                    <a href="#">MAQUILLAJE</a>
+                    <a href="#">TINTES</a>
+                    <a href="#">ESPEJOS</a>
+                    <a href="#">ACCESORIOS PARA EL CABELLO</a>
+                    <a href="#">CUIDADO PERSONAL</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">LIBROS</a>
+                <div class="dropdown-content">
+                    <a href="#">BIBLIAS</a>
+                    <a href="#">LIBROS ESCOLARES</a>
+                    <a href="#">PLAN LECTOR</a>
+                    <a href="#">TEXTOS ESCOLARES</a>
+                </div>
+            </li>
+
+        </ul>
+    </header>
+
+    <div class="main-content">
+        <aside class="sidebar">
+            <h3>Filtros <i class="fa-solid fa-angle-up"> </i></h3>
+
+            <ul>
+                <li><label><input type="checkbox" /> LÁPICES</label></li>
+                <li><label><input type="checkbox" /> HOJAS</label></li>
+                <li><label><input type="checkbox" /> RULADORES DE PUNTA FINA</label></li>
+                <li><label><input type="checkbox" /> BOLÍGRAFOS</label></li>
+                <li><label><input type="checkbox" /> PORTAMINAS</label></li>
+                <li><label><input type="checkbox" /> JUEGOS</label></li>
+                <li><label><input type="checkbox" /> MARCADORES</label></li>
+                <li><label><input type="checkbox" /> ROLLO DE GEL</label></li>
+                <li><label><input type="checkbox" /> COMPASES</label></li>
+                <li><label><input type="checkbox" /> COLORES PARA ARTISTAS</label></li>
+                <li><label><input type="checkbox" /> DIBUJO TÉCNICO</label></li>
+                <li><label><input type="checkbox" /> CARBONCILLOS</label></li>
+                <li><label><input type="checkbox" /> ACUARELAS</label></li>
+                <li><label><input type="checkbox" /> ESTIL</label></li>
+                <li><label><input type="checkbox" /> AFILALÁPICES</label></li>
+                <li><label><input type="checkbox" /> GOMAS</label></li>
+            </ul>
+
+            <h3>Marca <i class="fa-solid fa-angle-up"> </i></h3>
+            
+            <ul>
+                <li><label><input type="checkbox" /> FABER-CASTELL</label></li>
+                <li><label><input type="checkbox" /> HP </label></li>
+                <li><label><input type="checkbox" /> UNI-BALL </label></li>
+                <li><label><input type="checkbox" /> BIC </label></li>
+                <li><label><input type="checkbox" /> STAEDTLER </label></li>
+                <li><label><input type="checkbox" /> HASBRO </label></li>
+                <li><label><input type="checkbox" /> SHARPIE </label></li>
+                <li><label><input type="checkbox" /> PENTEL</label></li>
+                <li><label><input type="checkbox" /> HELIX </label></li>
+                <li><label><input type="checkbox" /> PRISMACOLOR </label></li>
+                <li><label><input type="checkbox" /> ROTRING </label></li>
+                <li><label><input type="checkbox" /> CONTÉ</label></li>
+                <li><label><input type="checkbox" /> WINSOR & NEWTON </label></li>
+                <li><label><input type="checkbox" /> STABILO </label></li>
+                <li><label><input type="checkbox" /> KUM </label></li>
+                <li><label><input type="checkbox" /> MILAN </label></li>
+            </ul>
+            
+            <h3>Precio <i class="fa-solid fa-angle-up"></i></h3>
+            <div class="price-filter">
+                <div class="price-range">
+                    <div class="price-values">
+                        <input type="number" class="min-price" min="0" max="169" value="0"> - 
+                        <input type="number" class="max-price" min="0" max="169" value="169">
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" class="slider" min="0" max="100" value="100">
+                    </div>
+                </div>
+            </div>
+            
+        </aside>
+
+        <section class="products">
+            <div class="page-indicator">
+                <a href="index.html">Inicio</a>
+                <span>></span>
+                <a href="objetos.html" class="active">Objetos</a>
+            </div>
+
+            <div class="products-header">
+                <h1>Todos los productos</h1>
+            </div>
+
+            <div class="products-options">
+                <span class="results">Mostrando 1 - 24 de 190 productos</span>
+                <div class="pagination">
+                    <label for="items-per-page">Mostrar:</label>
+                    <select id="items-per-page" name="items-per-page">
+                        <option value="24" selected>24 por página</option>
+                        <option value="48">48 por página</option>
+                        <option value="72">72 por página</option>
+                    </select>
+                </div>
+                <div class="sort">
+                    <label for="sort-by">Ordenar por:</label>
+                    <select id="sort-by" name="sort-by">
+                        <option value="most-sold" selected>Más vendidos</option>
+                        <option value="price-low-high">Precio: Menor a Mayor</option>
+                        <option value="price-high-low">Precio: Mayor a Menor</option>
+                        <option value="newest">Más reciente</option>
+                    </select>
+                </div>
+                <div class="view-toggle">
+                    <button aria-label="Vista en cuadrícula" class="grid-view active"><i class="fas fa-th"></i></button>
+                    <button aria-label="Vista en lista" class="list-view"><i class="fas fa-list"></i></button>
+                    <button aria-label="Cambiar vista" class="view-button"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 10%</span>
+                    <img src="img-productos/audifonos-casco-sony.jpg" alt="Audífonos" />
+                    <div class="brand">SONY</div>
+                    <div class="product-name">AUDÍFONOS SONY | CANCELACION DE RUIDO | NEGRO</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 120.00</span>
+                        <span class="discounted">S/. 102.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 15%</span>
+                    <img src="img-productos/funko-moonknight.jpg" alt="Colores" />
+                    <div class="brand">MARVEL</div>
+                    <div class="product-name">FUNKO MOONKNIGHT | MARVEL | FIGURA #1074</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 70.00</span>
+                        <span class="discounted">S/. 55.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 5%</span>
+                    <img src="img-productos/bitacora-block-canson.jpg" alt="Cuaderno" />
+                    <div class="brand">MILAN</div>
+                    <div class="product-name">BITACORA CANSON | PARA DIBUJO | 90 HOJAS</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 29.00</span>
+                        <span class="discounted">S/. 22.50</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 20%</span>
+                    <img src="img-productos/plastilina-artesco.jpg" alt="Juguete" />
+                    <div class="brand">ARTESCO</div>
+                    <div class="product-name">PLASTILINA JUMBO | ARTESCO| SET DE 12</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 9.50</span>
+                        <span class="discounted">S/. 7.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 10%</span>
+                    <img src="img-productos/wolverine-funko.jpg" alt="Mochila" />
+                    <div class="brand">MARVEL</div>
+                    <div class="product-name">FUNKO WOLVERINE | MARVEL | 50TH ANIVERSARIO</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 71.00</span>
+                        <span class="discounted">S/. 55.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 12%</span>
+                    <img src="img-productos/señor-de-los-anillos.jpg" alt="Papel de Colores" />
+                    <div class="brand">EDICIONES OBELISCO</div>
+                    <div class="product-name">EL SEÑOR DE LOS ANILLOS | TRILOGIA | J.R.R. TOLKIEN</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 73.00</span>
+                        <span class="discounted">S/. 63.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 8%</span>
+                    <img src="img-productos/lapices-color-vinifan.jpg" alt="Papel A4" />
+                    <div class="brand">VINIFAN</div>
+                    <div class="product-name">LAPICES DE COLORES | VINIFAN | SET DE 48</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 45.00</span>
+                        <span class="discounted">S/. 33.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 15%</span>
+                    <img src="img-productos/acuarelas.jpg" alt="Acuarelas" />
+                    <div class="brand">ARTI CREATIVO</div>
+                    <div class="product-name">SET ACUARELAS | 12 COLORES + 1 PINCEL | ACQUA</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 8.00</span>
+                        <span class="discounted">S/. 6.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 9 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 16%</span>
+                    <img src="img-productos/marcador.png" alt="Marcador" />
+                    <div class="brand">FABER-CASTELL</div>
+                    <div class="product-name">MARCADOR ACRILICO | DOBLE PUNTA | METALICO X6</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 40.00</span>
+                        <span class="discounted">S/. 34.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                 <!-- Producto 10 -->
+                 <div class="product-card">
+                    <span class="discount">Ahorra 10%</span>
+                    <img src="img-productos/calculadora.jpg" alt="Calculadora" />
+                    <div class="brand">CASIO</div>
+                    <div class="product-name">CALCULADORA CIENTIFCA | CASIO FX-95ES | PLUS</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 72.00</span>
+                        <span class="discounted">S/. 65.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 11 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 15%</span>
+                    <img src="img-productos/mouse-inalambrico.jpg" alt="Mouse" />
+                    <div class="brand">LOGITECH</div>
+                    <div class="product-name">MOUSE INALAMBRICO | LOGITECH M170 | ROSADO</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 55.00</span>
+                        <span class="discounted">S/. 47.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                 <!-- Producto 12 -->
+                 <div class="product-card">
+                    <span class="discount">Ahorra 13%</span>
+                    <img src="img-productos/marcadores-micron.jpg" alt="Marcadores-Micron" />
+                    <div class="brand">PIGMA-MICRON</div>
+                    <div class="product-name">MARCADORES MICRON | COLORES SURTIDOS | SET DE 6</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 44.00</span>
+                        <span class="discounted">S/. 38.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 13 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 20%</span>
+                    <img src="img-productos/cargador-portatil.png" alt="Cargador Portatil" />
+                    <div class="brand">XIAOMI</div>
+                    <div class="product-name">CARGADOR PORTÁTIL | 10000MAH. | XIAOMI MI POWER BANK 2</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 99.00</span>
+                        <span class="discounted">S/. 79.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 14 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 25%</span>
+                    <img src="img-productos/corrector-liquido-precision.jpg" alt="" />
+                    <div class="brand">CATRICE</div>
+                    <div class="product-name">CORRECTOR LIQUIDO | COVERAGE PRECISION | BEIGE ARENA</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 16.00</span>
+                        <span class="discounted">S/. 12.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 15 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 17%</span>
+                    <img src="img-productos/portaminas-tk9400.jpg" alt="Marcadores-Micron" />
+                    <div class="brand">FABER-CASTELL</div>
+                    <div class="product-name">PORTAMINAS | TK 9400 4B | 3,15 MM + SET DE MINAS</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 35.00</span>
+                        <span class="discounted">S/. 29.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 16 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 21%</span>
+                    <img src="img-productos/cinta-adhesiva-decorativa.jpg" alt="Marcadores-Micron" />
+                    <div class="brand">STICK'N-NOTES</div>
+                    <div class="product-name">CINTA ADHESIVA DECORATIVA | PACK DE COLORES | 16MM X 10M</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 24.00</span>
+                        <span class="discounted">S/. 19.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 17 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 18%</span>
+                    <img src="img-productos/crayones-jumbo-artesco.jpg" alt="Crayones Jumbo Artesco" />
+                    <div class="brand">ARTESCO</div>
+                    <div class="product-name">CRAYONES JUMBO | ARTESCO | SET DE 12</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 8.00</span>
+                        <span class="discounted">S/. 6.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 18 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 25%</span>
+                    <img src="img-productos/cuaderno-anillado-minerva.jpg" alt="Cuaderno-Minerva" />
+                    <div class="brand">MINERVA</div>
+                    <div class="product-name">CUADERNO ANILLADO | SURTIDO | 180 HOJAS</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 20.00</span>
+                        <span class="discounted">S/. 15.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 19 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 25%</span>
+                    <img src="img-productos/plastilina-jumbo-layconsa.jpg" alt="Marcadores-Micron" />
+                    <div class="brand">LAYCONSA</div>
+                    <div class="product-name">PLASTILINA JUMBO | LAYCONSA | SET DE 12</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 10.00</span>
+                        <span class="discounted">S/. 7.50</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 20 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 15%</span>
+                    <img src="img-productos/resaltadores-stabilo-15.jpg" alt="Resaltadores-Stabilo" />
+                    <div class="brand">STABILO</div>
+                    <div class="product-name">RESALTADORES STABILO | COLORES SURTIDOS | SET DE 15</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 65.00</span>
+                        <span class="discounted">S/. 55.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 21 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 17%</span>
+                    <img src="img-productos/folder-a4-vinifan.jpg" alt="Folder Vinifan" />
+                    <div class="brand">VINIFAN</div>
+                    <div class="product-name">FOLDER A4 | PIONNER | NEGRO</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 18.00</span>
+                        <span class="discounted">S/. 15.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 22 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 15%</span>
+                    <img src="img-productos/peluche-capibara.jpg" alt="Peluche-Capibara" />
+                    <div class="brand">PHARMAX</div>
+                    <div class="product-name">PELUCHE CAPIBARA | CON AUDIFONOS | 10CM</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 105.00</span>
+                        <span class="discounted">S/. 89.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 23 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 14%</span>
+                    <img src="img-productos/El-arte-de-la-guerra-resumen.jpg" alt="Marcadores-Micron" />
+                    <div class="brand">EDICIONES OBELISCO</div>
+                    <div class="product-name">EL ARTE DE LA GUERRA | LIBRO | SUN TZU</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 70.00</span>
+                        <span class="discounted">S/. 60.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <!-- Producto 24 -->
+                <div class="product-card">
+                    <span class="discount">Ahorra 13%</span>
+                    <img src="img-productos/audifonos-inalambricos-xiaomi.webp" alt="Marcadores-Micron" />
+                    <div class="brand">XIAOMI</div>
+                    <div class="product-name">AUDIFONOS INALAMBRICOS | NEGRO | REDMI BUDS 6</div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>0 reseñas</span>
+                    </div>
+                    <p class="price">
+                        <span class="original">S/. 102.00</span>
+                        <span class="discounted">S/. 89.00</span>
+                    </p>
+                    <p class="availability">Disponible</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="quick-view">Vista rápida</button>
+                </div>
+
+                <button class="back-to-top" aria-label="Volver al inicio">
+                    <i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+            </div>
+
+        </section>
+    </div>
+    
+    
+
+    <div class="whatsapp-contact">
+        <a href="https://wa.me/999451887" target="_blank" class="whatsapp-message">
+            Realiza tu pedido aquí 🚀
+        </a>
+        <a href="https://wa.me/999451887" target="_blank" class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column left">
+                <img src="img/JSR.jpg" alt="JSR logo" class="footer-logo" />
+                <h3>JSR Librería</h3>
+                <ul>
+                    <li><strong>Acerca de JSR Librería</strong></li>
+                    <li>Nosotros</li>
+                    <li>Ventas Corporativas</li>
+                    <li>Ofertas</li>
+                </ul>
+            </div>
+
+            <div class="footer-column center">
+                <h3>Atención al Cliente</h3>
+                <ul>
+                    <li>Contáctanos</li>
+                    <li>Comprobantes Electrónicos</li>
+                    <li>Políticas de descuentos y promociones</li>
+                    <li>Términos y Condiciones</li>
+                    <li>Cambios y Devoluciones</li>
+                    <li>Políticas de Privacidad</li>
+                    <li>Políticas de Cookies</li>
+                </ul>
+
+                <h3>JSR Club</h3>
+                <ul>
+                    <li>Registro</li>
+                    <li>Beneficios exclusivos</li>
+                    <li>Canjea tus puntos</li>
+                </ul>
+            </div>
+
+            <div class="footer-column right">
+                <h3>Proveedores</h3>
+                <ul>
+                    <li>Portal para proveedores</li>
+                    <li>Clientes con contrato</li>
+                </ul>
+
+                <h3>Promociones de libros</h3>
+                <ul>
+                    <li>Descuentos en libros</li>
+                    <li>Promociones temporada escolar</li>
+                </ul>
+
+                <h3>Libro de Reclamaciones</h3>
+                <img src="img/libro-reclamaciones.png" alt="Libro de Reclamaciones" class="footer-img" />
+                <p>
+                    JSR es una librería y distribuidora de libros académicos, novelas,
+                    material educativo y útiles escolares en el Perú.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© Derechos de autor 2025 JSR Librería. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Vista Rápida -->
+    <div class="modal-overlay" id="quickViewModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">×</span>
+            <div class="modal-left">
+
+                <img class="main-image" id="modalMainImage" src="" alt="Producto" />
+
+                <div class="thumbnail-gallery" id="modalThumbnails">
+                    <!-- Las miniaturas se añadirán dinámicamente -->
+                </div>
+            </div>
+            <div class="modal-right">
+                <div class="product-title" id="modalProductTitle"></div>
+                <div class="discount" id="modalDiscount"></div>
+                <div class="brand" id="modalBrand"></div>              
+                <div class="price">
+                    <span class="original" id="modalOriginalPrice"></span>
+                    <span class="discounted" id="modalDiscountedPrice"></span>
+                </div>
+                <div class="quantity">
+                    <span>Cantidad:</span>
+                    <button onclick="changeQuantity(-1)">-</button>
+                    <input type="number" id="modalQuantity" value="1" min="1">
+                    <button onclick="changeQuantity(1)">+</button>
+                </div>
+                <div class="actions">
+                    <button class="add-to-cart">Añadir al carrito</button>
+                    <button class="buy-now">Comprar ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/shop.js"></script> 
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - JSR Librería</title>
+
+    <link rel="stylesheet" href="css/catalogo.css" />
+
+    <link rel="stylesheet" href="css/sobre-nosotros.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/JSR.jpg" alt="Librería JSR Logo" width="50" />
+                <span>Librería JSR</span>
+            </a>
+        </div>
+
+        <div class="search-login">
+            <div class="search-bar">
+                <input type="text" placeholder="¿Qué estás buscando?" />
+                <button><i class="fa fa-search"></i></button>
+            </div>
+
+            <button class="login-button" onclick="window.location.href='login.html'">Inicia Sesión</button>
+            <button class="register-button" onclick="window.location.href='login.html'">Regístrate</button>
+
+            <div class="cart-item">
+                <a href="#" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="cart-dropdown" id="cartDropdown">
+                    <div class="cart-header">
+                        <h3>Carrito</h3>
+                        <span class="cart-close">&times;</span>
+                    </div>
+                    <div class="cart-items" id="cartItems">
+                        <!-- Los ítems se añadirán dinámicamente con JavaScript -->
+                    </div>
+                    <div class="cart-footer">
+                        <p>Total: S/. <span id="cartTotal">0.00</span></p>
+                        <div class="cart-actions">
+                            <button class="view-cart-btn">Ver carrito</button>
+                            <button class="checkout-btn">Finalizar Compra</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <header class="header-nav">
+        <ul class="nav-list">
+            <li><a href="#" class="active">LOS MÁS VENDIDOS</a></li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">UTILES</a>
+                <div class="dropdown-content">
+                    <a href="#">ESCOLAR</a>
+                    <a href="#">OFICINA</a>
+                    <a href="#">UNIVERSITARIO</a>
+                    <a href="#">ZONA DE LECTURA</a>
+                    <a href="#">ARTE Y DISEÑO</a>
+                    <a href="#">BORRADORES</a>
+                    <a href="#">CORRECTORES</a>
+                    <a href="#">CRAYONES Y ÓLEOS</a>
+                    <a href="#">LÁPICES</a>
+                    <a href="#">MARCADORES</a>
+                    <a href="#">PLUMONES INDELEBLES</a>
+                    <a href="#">PLUMONES PARA PIZARRA</a>
+                    <a href="#">REGLAS</a>
+                    <a href="#">TIJERAS</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">ESCRITORIO</a>
+                <div class="dropdown-content">
+                    <a href="#">ARCHIVADORES</a>
+                    <a href="#">DISPENSADORES</a>
+                    <a href="#">POSITS</a>
+                    <a href="#">CLIPS Y CHINCHES</a>
+                    <a href="#">PERFORADORAS</a>
+                    <a href="#">ENGRAPADORAS Y GRAPAS</a>
+                    <a href="#">CINTAS ADHESIVAS</a>
+                    <a href="#">ORGANIZADORES DE ESCRITORIO</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">JUGUETERIA</a>
+                <div class="dropdown-content">
+                    <a href="#">PELUCHES</a>
+                    <a href="#">COLOREOS</a>
+                    <a href="#">CAPIBARA</a>
+                    <a href="#">JUEGOS DIDÁCTICOS</a>
+                    <a href="#">ROMPECABEZAS</a>
+                    <a href="#">JUEGOS DE MESA</a>
+                    <a href="#">MUÑECOS Y FIGURAS</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">MOCHILAS Y ACCESORIOS</a>
+                <div class="dropdown-content">
+                    <a href="#">MOCHILAS</a>
+                    <a href="#">CARTUCHERAS</a>
+                    <a href="#">LONCHERAS</a>
+                    <a href="#">MALETAS</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">PAPELERIA</a>
+                <div class="dropdown-content">
+                    <a href="#">CARTONES</a>
+                    <a href="#">CARTULINAS</a>
+                    <a href="#">PAPEL CELOFÁN</a>
+                    <a href="#">PAPEL FOTOCOPIA</a>
+                    <a href="#">PAPEL FOTOGRÁFICO</a>
+                    <a href="#">PAPELES ADHESIVOS</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">ARCHIVO</a>
+                <div class="dropdown-content">
+                    <a href="#">CARPETAS Y ARCHIVADORES</a>
+                    <a href="#">FOLDERS ESCOLARES</a>
+                    <a href="#">ARCHIVADORES DE PALANCA</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li><a href="#">TECNOLOGÍA</a></li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">BELLEZA</a>
+                <div class="dropdown-content">
+                    <a href="#">PERFUMES</a>
+                    <a href="#">MAQUILLAJE</a>
+                    <a href="#">TINTES</a>
+                    <a href="#">ESPEJOS</a>
+                    <a href="#">ACCESORIOS PARA EL CABELLO</a>
+                    <a href="#">CUIDADO PERSONAL</a>
+                </div>
+            </li>
+            <li><span class="separator">|</span></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">LIBROS</a>
+                <div class="dropdown-content">
+                    <a href="#">BIBLIAS</a>
+                    <a href="#">LIBROS ESCOLARES</a>
+                    <a href="#">PLAN LECTOR</a>
+                    <a href="#">TEXTOS ESCOLARES</a>
+                </div>
+            </li>
+
+        </ul>
+    </header>
+    
+
+    <section class="hero">
+        <img src="img/carousel1.png" alt="LibreriaJSR carousel" class="hero-image">
+    </section>
+    
+    <section class="hero-text-container">
+        <div class="hero-text">
+            <h1 class="h1-hero">Encuentra todo lo que necesitas en Librerías JSR</h1>
+            <p class="p-hero">
+                Desde materiales escolares hasta insumos de oficina, en Librerías JSR tenemos todo lo que buscas al mejor precio. 
+                Descubre nuestra variedad de productos y equípate con lo mejor para tus estudios y proyectos.
+            </p>  
+        </div>
+    </section>
+    
+
+    <section class="why-jsr">
+        <h2>¿Para quién es JSR?</h2>
+
+        <div class="why-content">
+
+            <div class="text-container">
+
+                <div class="new-clients">
+
+                    <img src="img/star-icon.png" alt="Star Icon" class="icon" width="30" height="30">
+                    <div>
+                        <h4>Para nuestros clientes nuevos</h4>
+                        <p>Si eres estudiante, docente o amante de la lectura, 
+                        en Librerías JSR encontrarás los libros, útiles y materiales 
+                        que necesitas para tu aprendizaje o trabajo creativo.</p>
+                    </div>
+
+                </div>
+    
+                <div class="old-clients">
+
+                    <img src="img/like-icon.png" alt="Like Icon" class="icon" width="35" height="35">
+                    <div>
+                        <h4>Para nuestros clientes de siempre</h4>
+                        <p>Si ya eres parte de nuestra comunidad, aprovecha nuestras promociones 
+                        exclusivas, descuentos por fidelidad y beneficios en la compra de libros 
+                        y material escolar.</p>
+
+                    </div>                    
+                </div>
+
+            </div>
+            <div class="jsr-sobre-nosotros-img">
+                <img src="img/JSR-sobre-nosotros.png" alt="equipo JSR" class="team-photo" width="400">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="benefits">
+
+        <h2>Beneficios que ofrecen nuestros servicios</h2>
+
+        <div class="benefits-grid">
+
+            <div class="benefit-item">
+                <h3>Ahorro Asegurado</h3>
+                <p>Ofrece hasta un 50% de descuento en libros seleccionados y accede a precios
+                especiales en material escolar y oficina.
+                </p>
+
+            </div>
+            
+            <div class="benefit-item">
+                <h3>Financiamiento Fácil</h3>
+                <p>Elige la mejor opcion de pago, ya sea en cuotas o con promociones especiales,
+                para adquirir los libros y materiales que necesitas.
+                </p>
+            </div>
+
+            <div class="benefit-item">
+                <h3>Beneficio Transferible</h3>
+                <p>Regala o transfiere tu membresía JSR a familiares o amigos para que ellos
+                también accedan a descuentos y beneficios exclusivos.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="history">
+        <h2>Nuestros objetivos</h2>
+    
+        <div class="history-p">
+            <p>"JSR nació con la misión de manejar librerías eficientes y fáciles de integrar. 
+            Desde nuestros primeros días, nos hemos enfocado en la calidad, optimización y 
+            escalabilidad."</p>
+        </div>
+    
+        <div class="history-container">
+
+            <div class="vision-mission">
+      
+                <div class="vision">
+
+                    <div class="vision-content">
+
+                        <img src="img/jsr-vision.jpg" alt="JSR Vision">
+
+                        <div class="vision-text">
+                            <h3>Visión</h3>
+                            <p>Convertirnos en la referencia global en el desarrollo de librerías innovadoras 
+                            y eficientes, proporcionando soluciones modulares, escalables y de alto rendimiento 
+                            que potencien el desarrollo de software en diversas industrias. Nuestras librerías 
+                            destacan por su optimización de rendimiento, facilidad de integración y documentación 
+                            excepcional, asegurando que los desarrolladores puedan implementarlas sin fricciones y 
+                            maximizando la eficiencia de sus proyectos.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="mission">
+
+                    <div class="mission-content">
+
+                        <img src="img/jsr-mision.jpg" alt="JSR Mision">
+                        <div class="mission-text">
+                            <h3>Misión</h3>
+                            <p>Facilitar el desarrollo de software proporcionando librerías altamente optimizadas, 
+                            bien documentadas y fáciles de integrar. Nos comprometemos a ofrecer herramientas 
+                            confiables y escalables que permitan a los desarrolladores maximizar su productividad y
+                            crear soluciones eficientes en múltiples industrias.</p>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+
+    <section class="timeline-section">
+
+        <h2>Conoce nuestra historia</h2>
+        <p>Acontecimientos que marcaron lo que hoy en día somos</p>
+    
+        <div class="timeline">
+            <div class="timeline-event active" data-year="2005">2005</div>
+            <div class="timeline-event" data-year="2010">2010</div>
+            <div class="timeline-event" data-year="2018">2018</div>
+            <div class="timeline-event" data-year="2019">2019</div>
+            <div class="timeline-event" data-year="2020">2020</div>
+            <div class="timeline-event" data-year="2025">2025</div>
+        </div>
+    
+
+        <div class="timeline-content">
+            <button class="prev">&lt;</button>
+    
+            <div class="timeline-card">
+
+                <img src="img/timeline-1.png" alt="Libreria JSR Historia" width="400">
+
+                <div class="card-text">
+
+                    <h3>Génesis</h3>
+                    <p>Fundación de JSR en Jr. Tacna 3100, Urb. Perú, San Martín de Porres, 
+                    como negocio de artículos de librería y bazar. (5 de agosto)</p>
+
+                </div>
+            </div>
+    
+            <button class="next">&gt;</button>
+            
+        </div>
+    </section>
+    
+
+    <section class="faq">
+
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-content">
+    
+            <div class="faq-item">
+
+                <div class="faq-question">
+
+                    <h3>¿Qué tipo de librerías desarrolla JSR?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+
+                <p class="faq-answer">JSR desarrolla librerías enfocadas en optimización de rendimiento, seguridad y compatibilidad con los estándares web modernos.</p>
+            </div>
+    
+            <div class="faq-item">
+
+                <div class="faq-question">
+
+                    <h3>¿JSR ofrece soporte técnico para sus librerías?</h3>
+                    <span class="faq-toggle">+</span>
+
+                </div>
+
+                <p class="faq-answer">Sí, JSR proporciona soporte técnico a través de documentación, foros de comunidad y asistencia directa según el nivel de suscripción.</p>
+            </div>
+    
+            <div class="faq-item">
+
+                <div class="faq-question">
+
+                    <h3>¿Puedo contribuir al desarrollo de librerías JSR?</h3>
+                    <span class="faq-toggle">+</span>
+
+                </div>
+                <p class="faq-answer">Sí, JSR acepta contribuciones de la comunidad a través de su repositorio en GitHub, sujeto a revisión del equipo de desarrollo.</p>
+            </div>
+    
+            <div class="faq-item">
+
+                <div class="faq-question">
+
+                    <h3>¿Las librerías JSR cumplen con los estándares de seguridad?</h3>
+                    <span class="faq-toggle">+</span>
+
+                </div>
+                <p class="faq-answer">Las librerías de JSR son auditadas regularmente para cumplir con los estándares de seguridad y mejores prácticas del sector.</p>
+            </div>
+    
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column left">
+                <img src="img/JSR.jpg" alt="JSR logo" class="footer-logo">
+                <h3>JSR Librería</h3>
+                <ul>
+                    <li><strong>Acerca de JSR Librería</strong></li>
+                    <li>Nosotros</li>
+                    <li>Ventas Corporativas</li>
+                    <li>Ofertas</li>
+                </ul>
+            </div>
+    
+            <div class="footer-column center">
+                <h3>Atención al Cliente</h3>
+                <ul>
+                    <li>Contáctanos</li>
+                    <li>Comprobantes Electrónicos</li>
+                    <li>Políticas de descuentos y promociones</li>
+                    <li>Términos y Condiciones</li>
+                    <li>Cambios y Devoluciones</li>
+                    <li>Políticas de Privacidad</li>
+                    <li>Políticas de Cookies</li>
+                </ul>
+    
+                <h3>JSR Club</h3>
+                <ul>
+                    <li>Registro</li>
+                    <li>Beneficios exclusivos</li>
+                    <li>Canjea tus puntos</li>
+                </ul>
+            </div>
+    
+            <div class="footer-column right">
+                <h3>Proveedores</h3>
+                <ul>
+                    <li>Portal para proveedores</li>
+                    <li>Clientes con contrato</li>
+                </ul>
+    
+                <h3>Promociones de libros</h3>
+                <ul>
+                    <li>Descuentos en libros</li>
+                    <li>Promociones temporada escolar</li>
+                </ul>
+    
+                <h3>Libro de Reclamaciones</h3>
+                <img src="img/libro-reclamaciones.png" alt="Libro de Reclamaciones" class="footer-img">
+                
+                <p>JSR es una librería y distribuidora de libros académicos, novelas, 
+                material educativo y útiles escolares en el Perú.</p>
+    
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© Derechos de autor 2025 JSR Librería. Todos los derechos reservados</p>
+    
+        </div>
+    </footer>
+    
+
+    <script src="js/timeline.js"></script> 
+</body>
+</html>
